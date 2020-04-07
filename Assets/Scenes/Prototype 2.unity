@@ -577,8 +577,8 @@ MonoBehaviour:
   - {fileID: 1684583507474650551, guid: e9ccc7ed9f7bb8240bf7562e63df4a31, type: 3}
   - {fileID: 6458558899964075175, guid: e9c72016e4ff9e1479fff9ab89496259, type: 3}
   - {fileID: 597122640480402435, guid: 931a25e44dab9f64599c1aef7226077e, type: 3}
-  spawnRangeX: 20
-  spawnPosZ: 20
+  spawnRangeX: 10
+  spawnPosZ: 25
   startDelay: 2
   spawnInterval: 1.5
 --- !u!1 &1590138454

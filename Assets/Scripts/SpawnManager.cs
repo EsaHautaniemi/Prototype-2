@@ -8,11 +8,10 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] float spawnRangeX = 20;
     [SerializeField] float spawnPosZ = 20;
     [SerializeField] float startDelay = 2;
-    [SerializeField] float spawnInterval = 1.5f;
 
     void Start()
     {
-        InvokeRepeating("SpawnRandomAnimal", startDelay, spawnInterval);
+        Invoke("SpawnRandomAnimal", startDelay);
     }
 
     private void SpawnRandomAnimal()
@@ -21,5 +20,8 @@ public class SpawnManager : MonoBehaviour
         Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
 
         Instantiate(animalPrefabs[animalIndex], spawnPos, animalPrefabs[animalIndex].transform.rotation);
+
+        startDelay = Random.Range(3.0f, 5.0f);
+        Invoke("SpawnRandomAnimal", startDelay);
     }
 }
